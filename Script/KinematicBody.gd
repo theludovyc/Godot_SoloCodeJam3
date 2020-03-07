@@ -11,7 +11,9 @@ var haveMove := false
 
 const SENSI = 0.5
 
-const SPEED = 6
+const SPEED = 8
+
+var rotX := 0.0
 
 var dir:Vector3
 
@@ -28,8 +30,10 @@ func _process(delta):
 	if haveMove:
 		rotate_y(-(speed.x*SENSI*delta))
 	
-		$Camera.rotate_x(speed.y*SENSI*delta)
-		#$Camera.rotation = Vector3(clamp($Camera.rotation.x, deg2rad(-45), deg2rad(45) ), 0, 0)
+		rotX += speed.y*SENSI*delta
+		rotX = clamp(rotX, -0.8, 0.8)
+		
+		$Camera.rotation = Vector3(-rotX, $Camera.rotation.y, 0)
 		
 		haveMove=false
 

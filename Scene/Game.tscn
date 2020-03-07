@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Script/KinematicBody.gd" type="Script" id=1]
 [ext_resource path="res://Art/Anim/sarg.tres" type="SpriteFrames" id=2]
@@ -8,14 +8,25 @@
 [ext_resource path="res://Script/StaticBody.gd" type="Script" id=6]
 [ext_resource path="res://Script/Game.gd" type="Script" id=7]
 
-[sub_resource type="CylinderShape" id=4]
+[sub_resource type="CylinderShape" id=1]
 radius = 0.65
 
 [sub_resource type="Environment" id=2]
 background_mode = 1
-background_energy = 0.0
-ambient_light_energy = 0.0
+background_color = Color( 0.298039, 0.294118, 0.294118, 1 )
+ambient_light_color = Color( 0.752941, 1, 1, 1 )
+ambient_light_energy = 1.8
 ambient_light_sky_contribution = 0.0
+fog_enabled = true
+fog_color = Color( 0.309804, 0.309804, 0.309804, 1 )
+fog_sun_color = Color( 1, 0.901961, 0.701961, 1 )
+fog_depth_begin = 5.0
+fog_depth_end = 20.0
+fog_depth_curve = 0.3
+fog_transmit_curve = 0.0883884
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 4.71423, 1.5864, 0.209967 )
 
 [sub_resource type="CylinderShape" id=3]
 radius = 0.65
@@ -24,14 +35,14 @@ radius = 0.65
 script = ExtResource( 7 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 3, -0.25, 0 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.0132287, -0.25, 8.8159 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="Camera" type="Camera" parent="KinematicBody"]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.8, 0 )
@@ -39,11 +50,14 @@ environment = SubResource( 2 )
 current = true
 
 [node name="OmniLight" type="OmniLight" parent="KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.175692, 0 )
-light_color = Color( 0.866667, 1, 1, 1 )
-light_energy = 1.6
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.175692, -0.913311 )
+visible = false
+light_color = Color( 0.662745, 0.741176, 0.741176, 1 )
+light_energy = 2.66
 shadow_enabled = true
-omni_range = 5.60844
+shadow_bias = 3.93
+omni_range = 14.3344
+omni_attenuation = 1.18921
 
 [node name="Label" type="Label" parent="."]
 margin_left = 16.3865
@@ -56,7 +70,7 @@ __meta__ = {
 }
 
 [node name="Spatial" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.41548 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -73,8 +87,14 @@ material_override = ExtResource( 4 )
 pixel_size = 0.05
 texture = ExtResource( 5 )
 
+[node name="StaticBody" type="StaticBody" parent="Spatial"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.78722 )
+shape = SubResource( 4 )
+
 [node name="Spatial4" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -3.2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -8.41548 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -92,7 +112,7 @@ pixel_size = 0.05
 texture = ExtResource( 5 )
 
 [node name="Spatial3" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, -3.2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, -8.41548 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -109,19 +129,14 @@ material_override = ExtResource( 4 )
 pixel_size = 0.05
 texture = ExtResource( 5 )
 
-[node name="Spatial2" type="Spatial" parent="."]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite3D2" type="Sprite3D" parent="Spatial2"]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, 0 )
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, -5.21548 )
 material_override = ExtResource( 4 )
 pixel_size = 0.05
 texture = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.89201 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.10749 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
@@ -141,6 +156,7 @@ playing = true
 shape = SubResource( 3 )
 
 [node name="CSGBox" type="CSGBox" parent="StaticBody"]
+visible = false
 width = 0.564653
 height = 1.59602
 depth = 0.534014
