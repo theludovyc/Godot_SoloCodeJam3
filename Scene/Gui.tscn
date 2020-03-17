@@ -16,3 +16,4 @@ __meta__ = {
 [node name="MiniGun" parent="CenterContainer" instance=ExtResource( 1 )]
 margin_left = 420.0
 margin_right = 860.0
+margin_bottom = 340.0

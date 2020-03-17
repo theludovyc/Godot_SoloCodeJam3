@@ -32,7 +32,6 @@ func _ready():
 func _process(delta):
 	if !firing and Input.is_action_just_pressed("mouseLeft"):
 		$Timer.start()
-		$Fire.visible = true
 		firing=true
 		
 	if firing and Input.is_action_just_released("mouseLeft"):
