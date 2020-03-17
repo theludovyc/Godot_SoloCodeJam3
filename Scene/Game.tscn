@@ -95,3 +95,5 @@ depth = 0.534014
 [node name="Map" parent="." instance=ExtResource( 3 )]
 
 [node name="Gui" parent="." instance=ExtResource( 4 )]
+
+[editable path="Gui"]

@@ -1,5 +1,7 @@
 extends Control
 
+signal shoot
+
 var miniGun0 = preload("res://Art/MiniGun/chgga0.png")
 var miniGun1 = preload("res://Art/MiniGun/chggb0.png")
 
@@ -21,6 +23,9 @@ func nextState():
 		$MG.texture = miniGun1
 		$Fire.visible = false
 		$ASP.play()
+		
+	emit_signal("shoot")
+	
 	state = !state
 
 # Called when the node enters the scene tree for the first time.
