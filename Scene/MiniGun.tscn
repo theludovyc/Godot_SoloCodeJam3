@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Art/MiniGun/chgga0.png" type="Texture" id=1]
+[ext_resource path="res://Script/MiniGun.gd" type="Script" id=2]
+[ext_resource path="res://Art/MiniGun/chgfa0.png" type="Texture" id=3]
+[ext_resource path="res://Art/MiniGun/dsbarexp.wav" type="AudioStream" id=4]
+
+[node name="MiniGun" type="Control"]
+margin_right = 440.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 440, 340 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MG" type="TextureRect" parent="."]
+margin_left = 0.804291
+margin_top = 0.80426
+margin_right = 440.804
+margin_bottom = 340.804
+rect_min_size = Vector2( 440, 340 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fire" type="TextureRect" parent="."]
+visible = false
+margin_left = 80.0
+margin_right = 364.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 284, 212 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+
+[node name="ASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

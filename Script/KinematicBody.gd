@@ -11,7 +11,7 @@ var haveMove := false
 
 const SENSI = 0.5
 
-const SPEED = 8
+const SPEED = 12
 
 var rotX := 0.0
 

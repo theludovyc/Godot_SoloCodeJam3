@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mud_64.png-4d82f1fc169d055ea8e21c19b5462ad7.stex"
+path="res://.import/chgfa0.png-786ba87496fbc1068f7af32a9e926a4f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Floor/mud_64.png"
-dest_files=[ "res://.import/mud_64.png-4d82f1fc169d055ea8e21c19b5462ad7.stex" ]
+source_file="res://Art/MiniGun/chgfa0.png"
+dest_files=[ "res://.import/chgfa0.png-786ba87496fbc1068f7af32a9e926a4f.stex" ]
 
 [params]
 
@@ -23,7 +23,7 @@ flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

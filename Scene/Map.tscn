@@ -1,0 +1,178 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Art/wall_spatialmaterial.tres" type="Material" id=1]
+[ext_resource path="res://Art/Wall/wall_wood_0.png" type="Texture" id=2]
+[ext_resource path="res://Art/Floor/mud_64.png" type="Texture" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 4.71423, 1.5864, 0.209967 )
+
+[node name="Map" type="Node"]
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, 0 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, -3.2 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D9" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, 3.2 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D10" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, 6.4 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D11" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, -6.4 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D12" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, 9.6 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D13" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -3.2, -1.6, 9.6 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D14" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -3.2, -1.6, 6.4 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D15" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 3.2, -1.6, 6.4 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D16" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 3.2, -1.6, 9.6 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 3.2, -1.6, -3.2 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D6" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 3.2, -1.6, 0 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D7" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -3.2, -1.6, 0 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D17" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -3.2, -1.6, 3.2 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D18" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 3.2, -1.6, 3.2 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D19" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 3.2, -1.6, -6.4 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D20" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -3.2, -1.6, -6.4 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Sprite3D8" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, -3.2, -1.6, -3.2 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite3D" type="Sprite3D" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 2 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, 0 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="Spatial"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Spatial/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.78722 )
+shape = SubResource( 1 )
+
+[node name="Spatial4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -9.6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite3D" type="Sprite3D" parent="Spatial4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 2 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="Spatial4"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, 0 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
+
+[node name="Spatial3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, -9.6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite3D" type="Sprite3D" parent="Spatial3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 2 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="Spatial3"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -1.6, 0 )
+material_override = ExtResource( 1 )
+pixel_size = 0.05
+texture = ExtResource( 3 )
