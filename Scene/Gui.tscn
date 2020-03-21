@@ -17,3 +17,18 @@ __meta__ = {
 margin_left = 420.0
 margin_right = 860.0
 margin_bottom = 340.0
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer2"]
+margin_left = 635.0
+margin_top = 355.0
+margin_right = 645.0
+margin_bottom = 365.0
+rect_min_size = Vector2( 10, 10 )
+color = Color( 1, 0, 0, 1 )

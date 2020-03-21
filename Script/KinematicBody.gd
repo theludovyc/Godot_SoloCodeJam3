@@ -41,3 +41,13 @@ func _process(delta):
 
 func _physics_process(delta):
 	move_and_slide(dir.rotated(Vector3.UP, rotation.y).normalized()*SPEED)
+
+
+func _on_MiniGun_shoot():
+	if $Camera/RayCast.is_colliding():
+		var c = $Camera/RayCast.get_collider();
+		print("hello", c.name);
+		
+		if c.is_in_group("Ennemy"):
+			c.doHit()
+	pass # Replace with function body.

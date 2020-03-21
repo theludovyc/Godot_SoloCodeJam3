@@ -14,7 +14,8 @@ func _process(delta):
 	var dir = translation.direction_to(get_parent().get_player().translation)
 	
 	rotation.y = atan2(dir.x, dir.z)
-	
 	pass
 	
-#	pass
+func doHit():
+	print("I do hit !")
+	$ASP3.play()
