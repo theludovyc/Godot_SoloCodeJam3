@@ -1,6 +1,8 @@
 extends Control
 
-signal shoot
+signal shoot(damage)
+
+const DAMAGE = 5.0
 
 var miniGun0 = preload("res://Art/MiniGun/chgga0.png")
 var miniGun1 = preload("res://Art/MiniGun/chggb0.png")
@@ -24,7 +26,7 @@ func nextState():
 		$Fire.visible = false
 		$ASP.play()
 		
-	emit_signal("shoot")
+	emit_signal("shoot", DAMAGE)
 	
 	state = !state
 

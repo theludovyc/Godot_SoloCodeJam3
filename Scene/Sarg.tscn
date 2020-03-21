@@ -24,7 +24,7 @@ double_sided = false
 alpha_cut = 2
 frames = ExtResource( 1 )
 animation = "move"
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -36,6 +36,8 @@ visible = false
 width = 0.564653
 height = 1.59602
 depth = 0.534014
+
+[node name="Tween" type="Tween" parent="."]
 
 [node name="ASP3" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 3 )

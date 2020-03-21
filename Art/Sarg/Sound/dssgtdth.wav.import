@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dssgtdth.wav-0b3d77dc74c5f867467bd7277378af59.sample"
+
+[deps]
+
+source_file="res://Art/Sarg/Sound/dssgtdth.wav"
+dest_files=[ "res://.import/dssgtdth.wav-0b3d77dc74c5f867467bd7277378af59.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=true
+force/max_rate_hz=11025.0
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
