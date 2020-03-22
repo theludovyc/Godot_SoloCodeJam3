@@ -16,18 +16,18 @@
 
 [resource]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "move",
-"speed": 3.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "attack",
-"speed": 4.0
-}, {
 "frames": [ ExtResource( 13 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 11 ) ],
 "loop": false,
 "name": "death",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": false,
+"name": "attack",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "move",
+"speed": 3.0
 } ]

@@ -26,26 +26,26 @@ fog_transmit_curve = 0.0883884
 [node name="Game" type="Node"]
 script = ExtResource( 7 )
 
-[node name="KinematicBody" type="KinematicBody" parent="."]
+[node name="Player" type="KinematicBody" parent="."]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.0132287, -0.25, 8.8159 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Player"]
 shape = SubResource( 1 )
 
-[node name="Camera" type="Camera" parent="KinematicBody"]
+[node name="Camera" type="Camera" parent="Player"]
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0.8, 0 )
 environment = SubResource( 2 )
 current = true
 
-[node name="RayCast" type="RayCast" parent="KinematicBody/Camera"]
+[node name="RayCast" type="RayCast" parent="Player/Camera"]
 enabled = true
 cast_to = Vector3( 0, 0, -18 )
 
-[node name="OmniLight" type="OmniLight" parent="KinematicBody"]
+[node name="OmniLight" type="OmniLight" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.175692, -0.913311 )
 visible = false
 light_color = Color( 0.662745, 0.741176, 0.741176, 1 )
@@ -71,6 +71,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
 [node name="Map" parent="." instance=ExtResource( 3 )]
 
 [node name="Gui" parent="." instance=ExtResource( 4 )]
-[connection signal="shoot" from="Gui/CenterContainer/MiniGun" to="KinematicBody" method="_on_MiniGun_shoot"]
+[connection signal="hit" from="Sarg" to="Gui" method="_on_Ennemy_hit"]
+[connection signal="shoot" from="Gui/CenterContainer/MiniGun" to="Player" method="_on_MiniGun_shoot"]
 
 [editable path="Gui"]

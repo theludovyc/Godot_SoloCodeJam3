@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scene/MiniGun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Art/Player/dsoof.wav" type="AudioStream" id=2]
+[ext_resource path="res://Script/Gui.gd" type="Script" id=3]
 
 [node name="Gui" type="Node"]
+script = ExtResource( 3 )
+
+[node name="PlayerHit_ASP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="PlayerHit_Rect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerHit_Tween" type="Tween" parent="."]
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_top = 1.0

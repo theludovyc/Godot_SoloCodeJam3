@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dsoof.wav-96a87bdff8eb683ab66d8a250767e2bf.sample"
+
+[deps]
+
+source_file="res://Art/Player/dsoof.wav"
+dest_files=[ "res://.import/dsoof.wav-96a87bdff8eb683ab66d8a250767e2bf.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=true
+force/max_rate_hz=11025.0
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

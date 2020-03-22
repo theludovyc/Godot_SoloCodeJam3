@@ -24,7 +24,7 @@ double_sided = false
 alpha_cut = 2
 frames = ExtResource( 1 )
 animation = "move"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
@@ -42,3 +42,8 @@ depth = 0.534014
 [node name="ASP3" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 3 )
 unit_size = 15.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.9
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

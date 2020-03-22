@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dssgtsit.wav-e626ab1c86ff6bdc8fa6581c1d7b963f.sample"
+
+[deps]
+
+source_file="res://Art/Sarg/Sound/dssgtsit.wav"
+dest_files=[ "res://.import/dssgtsit.wav-e626ab1c86ff6bdc8fa6581c1d7b963f.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=true
+force/max_rate_hz=11025.0
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
