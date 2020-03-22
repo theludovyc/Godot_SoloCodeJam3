@@ -68,10 +68,22 @@ __meta__ = {
 [node name="Sarg" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
 
+[node name="Sarg2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8 )
+
+[node name="Sarg4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4, 0, -8 )
+
+[node name="Sarg3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0, -8 )
+
 [node name="Map" parent="." instance=ExtResource( 3 )]
 
 [node name="Gui" parent="." instance=ExtResource( 4 )]
 [connection signal="hit" from="Sarg" to="Gui" method="_on_Ennemy_hit"]
+[connection signal="hit" from="Sarg2" to="Gui" method="_on_Ennemy_hit"]
+[connection signal="hit" from="Sarg4" to="Gui" method="_on_Ennemy_hit"]
+[connection signal="hit" from="Sarg3" to="Gui" method="_on_Ennemy_hit"]
 [connection signal="shoot" from="Gui/CenterContainer/MiniGun" to="Player" method="_on_MiniGun_shoot"]
 
 [editable path="Gui"]

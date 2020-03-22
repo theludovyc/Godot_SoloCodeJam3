@@ -59,6 +59,11 @@ func death():
 	attack = false
 	
 	$Timer.stop()
+	$Timer.wait_time = 5
+	$Timer.start()
+	
+	$Tween.interpolate_property($AnimatedSprite3D, "modulate", Color(1, 1, 1, 1), Color(1, 1, 1, 0), 5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+	$Tween.start()
 	
 	$CollisionShape.disabled = true
 	
@@ -68,7 +73,6 @@ func death():
 	$AnimatedSprite3D.play("death")
 	
 	follow = false
-	print("death")
 
 func doHit(damage:float):
 	#print("I do hit !")
@@ -87,6 +91,8 @@ func doHit(damage:float):
 func _on_Timer_timeout():
 	if attack:
 		doAtk()
+	elif !follow:
+		queue_free()
 	else:
 		$AnimatedSprite3D.play("move")
 	pass # Replace with function body.
