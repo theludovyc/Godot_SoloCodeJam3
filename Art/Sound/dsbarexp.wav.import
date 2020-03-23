@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dsbarexp.wav-38acb6a8279cfaabeb191deef5636e87.sample"
+
+[deps]
+
+source_file="res://Art/Sound/dsbarexp.wav"
+dest_files=[ "res://.import/dsbarexp.wav-38acb6a8279cfaabeb191deef5636e87.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=true
+force/max_rate_hz=11025.0
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -5,6 +5,8 @@ extends KinematicBody
 # var a = 2
 # var b = "text"
 
+signal aie(damage)
+
 var speed:Vector2
 
 var haveMove := false
@@ -50,3 +52,7 @@ func _on_MiniGun_shoot(damage:float):
 		if c.is_in_group("Ennemy"):
 			c.doHit(damage)
 	pass # Replace with function body.
+	
+func doHit(damage:float):
+	emit_signal("aie", damage)
+	pass

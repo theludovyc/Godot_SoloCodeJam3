@@ -1,14 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Art/Anim/sarg.tres" type="SpriteFrames" id=1]
-[ext_resource path="res://Script/StaticBody.gd" type="Script" id=2]
+[ext_resource path="res://Art/Anim/skul.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Script/Skull.gd" type="Script" id=2]
 [ext_resource path="res://Art/Sarg/Sound/dsdmpain.wav" type="AudioStream" id=3]
+[ext_resource path="res://Script/T_Move.gd" type="Script" id=4]
 
 [sub_resource type="CylinderShape" id=1]
-radius = 0.65
-height = 3.0
+radius = 0.75
+height = 2.2
 
-[node name="Sarg" type="StaticBody" groups=[
+[node name="Skull" type="StaticBody" groups=[
 "Ennemy",
 ]]
 script = ExtResource( 2 )
@@ -17,19 +18,21 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0 )
 pixel_size = 0.05
 shaded = true
 double_sided = false
 alpha_cut = 2
 frames = ExtResource( 1 )
 animation = "move"
-frame = 1
 playing = true
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.11, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0 )
 shape = SubResource( 1 )
+
+[node name="T_Move" type="Tween" parent="."]
+script = ExtResource( 4 )
 
 [node name="Tween" type="Tween" parent="."]
 
@@ -38,6 +41,7 @@ stream = ExtResource( 3 )
 unit_size = 15.0
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.9
+wait_time = 0.1
 one_shot = true
+[connection signal="tween_all_completed" from="T_Move" to="T_Move" method="_on_T_Move_tween_all_completed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

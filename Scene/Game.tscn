@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/KinematicBody.gd" type="Script" id=1]
-[ext_resource path="res://Scene/Sarg.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Map.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Gui.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Script/Game.gd" type="Script" id=7]
@@ -65,25 +64,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sarg" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8 )
-
-[node name="Sarg2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8 )
-
-[node name="Sarg4" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4, 0, -8 )
-
-[node name="Sarg3" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8, 0, -8 )
-
 [node name="Map" parent="." instance=ExtResource( 3 )]
 
 [node name="Gui" parent="." instance=ExtResource( 4 )]
-[connection signal="hit" from="Sarg" to="Gui" method="_on_Ennemy_hit"]
-[connection signal="hit" from="Sarg2" to="Gui" method="_on_Ennemy_hit"]
-[connection signal="hit" from="Sarg4" to="Gui" method="_on_Ennemy_hit"]
-[connection signal="hit" from="Sarg3" to="Gui" method="_on_Ennemy_hit"]
+[connection signal="aie" from="Player" to="Gui" method="_on_Ennemy_hit"]
 [connection signal="shoot" from="Gui/CenterContainer/MiniGun" to="Player" method="_on_MiniGun_shoot"]
 
 [editable path="Gui"]

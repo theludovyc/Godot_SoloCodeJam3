@@ -21,7 +21,7 @@ const DAMAGE = 10
 # var b = "text"
 
 # Called when the node enters the scene tree for the first time.
-#func _ready():
+#func _ready():	
 #	$AnimatedSprite3D.play("move")
 #	pass # Replace with function body.
 
