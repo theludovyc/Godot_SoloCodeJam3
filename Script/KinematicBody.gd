@@ -32,10 +32,10 @@ func _process(delta):
 	if haveMove:
 		rotate_y(-(speed.x*SENSI*delta))
 	
-		rotX += speed.y*SENSI*delta
-		rotX = clamp(rotX, -0.8, 0.8)
-		
-		$Camera.rotation = Vector3(-rotX, $Camera.rotation.y, 0)
+#		rotX += speed.y*SENSI*delta
+#		rotX = clamp(rotX, -0.8, 0.8)
+#
+#		$Camera.rotation = Vector3(-rotX, $Camera.rotation.y, 0)
 		
 		haveMove=false
 
