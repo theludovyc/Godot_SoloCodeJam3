@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Script/KinematicBody.gd" type="Script" id=1]
+[ext_resource path="res://Scene/Sarg.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scene/Map.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scene/Gui.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Skull.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Script/Game.gd" type="Script" id=7]
 
 [sub_resource type="CylinderShape" id=1]
@@ -26,7 +28,7 @@ fog_transmit_curve = 0.0883884
 script = ExtResource( 7 )
 
 [node name="Player" type="KinematicBody" parent="."]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0.0132287, -0.25, 8.8159 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, -0.25, 0 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -70,6 +72,12 @@ __meta__ = {
 
 [node name="CenterContainer2" parent="Gui" index="4"]
 visible = false
+
+[node name="Sarg" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6, 0, -9.6 )
+
+[node name="Skull" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.6, 0, -11.2 )
 [connection signal="aie" from="Player" to="Gui" method="_on_Ennemy_hit"]
 [connection signal="shoot" from="Gui/CenterContainer/MiniGun" to="Player" method="_on_MiniGun_shoot"]
 
