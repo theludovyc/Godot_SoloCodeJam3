@@ -1,6 +1,6 @@
 extends StaticBody
 
-const SPEED = 8
+const SPEED = 6.0
 
 var hitSound = preload("res://Art/Skull/dsmandth.wav")
 var deathSound = preload("res://Art/Sound/dsbarexp.wav")
@@ -80,4 +80,5 @@ func _on_Timer_timeout():
 	var result = get_world().direct_space_state.intersect_shape(phy)
 	
 	for r in result:
-		r.collider.doHit(DAMAGE)
+		if r.collider.is_in_group("Livers"):
+			r.collider.doHit(DAMAGE)

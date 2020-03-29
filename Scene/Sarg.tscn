@@ -9,7 +9,8 @@ radius = 0.65
 height = 3.0
 
 [node name="Sarg" type="StaticBody" groups=[
-"Ennemy",
+"Livers",
+"Monsters",
 ]]
 script = ExtResource( 2 )
 __meta__ = {

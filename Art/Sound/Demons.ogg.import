@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Demons.ogg-965eec98301f5bff4970848ad19843be.oggstr"
+
+[deps]
+
+source_file="res://Art/Sound/Demons.ogg"
+dest_files=[ "res://.import/Demons.ogg-965eec98301f5bff4970848ad19843be.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

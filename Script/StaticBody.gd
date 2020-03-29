@@ -2,13 +2,15 @@ extends StaticBody
 
 signal hit(damage)
 
-const SPEED = 2.0
+signal test
+
+const SPEED = 3.5
 
 var atkSound = preload("res://Art/Sarg/Sound/dssgtsit.wav")
 var hitSound = preload("res://Art/Sarg/Sound/dsdmpain.wav")
 var deathSound = preload("res://Art/Sarg/Sound/dssgtdth.wav")
 
-var life:float = 30
+var life:float = 15
 
 var follow = true
 
@@ -33,6 +35,8 @@ func doAtk():
 	$ASP3.play()
 	
 	emit_signal("hit", DAMAGE)
+	
+	emit_signal("test")
 	
 	$Timer.start()
 

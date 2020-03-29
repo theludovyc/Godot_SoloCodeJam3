@@ -47,9 +47,9 @@ func _physics_process(delta):
 func _on_MiniGun_shoot(damage:float):
 	if $Camera/RayCast.is_colliding():
 		var c = $Camera/RayCast.get_collider();
-		print("hello : ", c.name);
+		#print("hello : ", c.name);
 		
-		if c.is_in_group("Ennemy"):
+		if c.is_in_group("Monsters"):
 			c.doHit(damage)
 	pass # Replace with function body.
 	

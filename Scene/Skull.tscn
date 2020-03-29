@@ -10,7 +10,8 @@ radius = 0.75
 height = 2.2
 
 [node name="Skull" type="StaticBody" groups=[
-"Ennemy",
+"Livers",
+"Monsters",
 ]]
 script = ExtResource( 2 )
 __meta__ = {
@@ -25,6 +26,7 @@ double_sided = false
 alpha_cut = 2
 frames = ExtResource( 1 )
 animation = "move"
+frame = 1
 playing = true
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scene/MiniGun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/Player/dsoof.wav" type="AudioStream" id=2]
 [ext_resource path="res://Script/Gui.gd" type="Script" id=3]
+[ext_resource path="res://Art/Sound/Demons.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Art/Font/new_dynamicfont.tres" type="DynamicFont" id=5]
 
 [node name="Gui" type="Node"]
 script = ExtResource( 3 )
@@ -34,17 +36,35 @@ margin_left = 420.0
 margin_right = 860.0
 margin_bottom = 340.0
 
-[node name="CenterContainer2" type="CenterContainer" parent="."]
+[node name="Center2" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="CenterContainer2"]
+[node name="ColorRect" type="ColorRect" parent="Center2"]
+visible = false
 margin_left = 635.0
 margin_top = 355.0
 margin_right = 645.0
 margin_bottom = 365.0
 rect_min_size = Vector2( 10, 10 )
 color = Color( 1, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="Center2"]
+margin_left = 360.0
+margin_top = 312.0
+margin_right = 920.0
+margin_bottom = 408.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.74902, 0, 0, 1 )
+text = "PRESS ANY KEY"
+
+[node name="ASP_Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

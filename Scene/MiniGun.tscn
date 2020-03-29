@@ -17,8 +17,8 @@ __meta__ = {
 [node name="MG" type="TextureRect" parent="."]
 margin_left = 0.804291
 margin_top = 0.80426
-margin_right = 110.804
-margin_bottom = 85.8043
+margin_right = 440.804
+margin_bottom = 340.804
 rect_min_size = Vector2( 440, 340 )
 texture = ExtResource( 1 )
 expand = true
@@ -44,4 +44,5 @@ wait_time = 0.125
 
 [node name="ASP" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -6.0
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
