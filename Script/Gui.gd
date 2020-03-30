@@ -6,6 +6,8 @@ extends Node
 # var b = "text"
 var life = 100.0
 
+var invincible = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,17 +17,16 @@ func _ready():
 #	pass
 
 func _on_Ennemy_hit(damage):
-	$PlayerHit_ASP.play()
-	
-	$PlayerHit_Tween.interpolate_property($PlayerHit_Rect, "color", Color(1, 0, 0, 0.25), Color(1, 0, 0, 0), 0.2, Tween.TRANS_BACK, Tween.EASE_IN_OUT)
-	$PlayerHit_Tween.start()
-	
-	life -= damage;
-	
-	if life < 0:
-		get_tree().reload_current_scene()
-	
-	pass # Replace with function body.
+	if !invincible:
+		$PlayerHit_ASP.play()
+		
+		$PlayerHit_Tween.interpolate_property($PlayerHit_Rect, "color", Color(1, 0, 0, 0.25), Color(1, 0, 0, 0), 0.2, Tween.TRANS_BACK, Tween.EASE_IN_OUT)
+		$PlayerHit_Tween.start()
+		
+		life -= damage;
+		
+		if life < 0:
+			get_tree().reload_current_scene()
 
 func doStart():
 	$Timer.stop()

@@ -82,6 +82,11 @@ __meta__ = {
 
 [node name="Gui" parent="." instance=ExtResource( 4 )]
 
+[node name="Label" parent="Gui/Center2" index="1"]
+margin_left = 336.0
+margin_right = 944.0
+text = "SHOOT TO START"
+
 [node name="PortalXmZm" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2, 0, -11.2 )
 
@@ -125,6 +130,7 @@ shape = SubResource( 6 )
 [node name="Timer" type="Timer" parent="."]
 [connection signal="aie" from="Player" to="Gui" method="_on_Ennemy_hit"]
 [connection signal="shoot" from="Gui/CenterContainer/MiniGun" to="Player" method="_on_MiniGun_shoot"]
+[connection signal="finished" from="Gui/ASP_Music" to="." method="_on_ASP_Music_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="Gui"]
