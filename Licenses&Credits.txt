@@ -1,0 +1,7 @@
+Font : KenPixel & KenVector fonts by Kenney Vleugels (www.kenney.nl) License (CC0) http://creativecommons.org/publicdomain/zero/1.0/
+
+Music : Royalty Free Metal Instrumental License (CC3) https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+Graphics : Freedoom https://github.com/freedoom/freedoom/blob/master/COPYING.adoc
+
+Others : theLudovyc (https://theludovyc.itch.io/ ; https://github.com/theludovyc) License (CC4) https://creativecommons.org/licenses/by/4.0/
